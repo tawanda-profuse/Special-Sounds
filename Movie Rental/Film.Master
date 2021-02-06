@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Film.master.cs" Inherits="Movie_Rental.Film" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!-- APlayer CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+
+    <%--our custom css--%>
+    <link href="css/customstylesheet.css?version=2.5" rel="stylesheet" type="text/css" />
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <%--old navbar--%>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                &nbsp;&nbsp;&nbsp;
+                <div class="container">
+                    <a class="navbar-brand" href="HomePage.aspx" style="font-size: 30px; font-family: Impact;">
+                        <img src="images/music-album1.png" width="70" height="70" />
+                        Special Sounds
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="color: #00FF00"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <%--navbar-nav mr-auto--%>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="HomePage.aspx">Home</a>
+                                <%--<asp:LinkButton class="nav-link" ID="LinkButton13" runat="server">Home</asp:LinkButton>--%>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="aboutus.aspx">About Us</a>
+                                <%--<asp:LinkButton class="nav-link" ID="LinkButton14" runat="server">About Us</asp:LinkButton>--%>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contact.aspx">Contact</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" OnClientClick="redirectMe">View Albums</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" OnClientClick="redirectMe(); return false;" OnClick="LinkButton5_Click">Playlist</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton13" runat="server" OnClick="LinkButton13_Click">Affiliates</asp:LinkButton>
+                            </li>
+
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton14" runat="server" OnClick="LinkButton14_Click">Creativity</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Sign In</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Hey User</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <%--old navbar--%>
+        </div>
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <div>
+            <!-- Footer -->
+            <footer>
+                <div id="footer1" class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <p>
+                                <strong>
+                                    <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Administrator</asp:LinkButton></strong>
+                                &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="False">Artists</asp:LinkButton>
+                                &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Record Labels</asp:LinkButton>
+                                &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" Visible="False">Album Lending</asp:LinkButton>
+                                &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" Visible="False"> New Releases</asp:LinkButton>
+                                &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" Visible="False">Our Members</asp:LinkButton>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer2" class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <strong>
+                                <p style="color: black">&copy Copyright. <a class="footerlinks" href="contact.aspx" target="_blank">Special Sounds</a></p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ./Footer -->
+        </div>
+    </form>
+</body>
+</html>
