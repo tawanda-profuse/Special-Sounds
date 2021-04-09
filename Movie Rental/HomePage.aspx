@@ -2,18 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Home</title>
-
-    <%--<script type="text/javascript">
-        function redirectMe() {
-            window.location.replace("loading.aspx");
-        }
-    </script>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+
     <section>
         <img src="images/home-bg.png" class="img-fluid" />
     </section>
+
     <section>
         <div class="container">
             <div class="row">

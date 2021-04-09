@@ -13,10 +13,8 @@
     <link href="fontawesome/css/all.css" rel="stylesheet" />
     <!-- APlayer CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
-
     <%--our custom css--%>
     <link href="css/customstylesheet.css?version=2.5" rel="stylesheet" type="text/css" />
-
     <%--jquery--%>
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <%--popper js--%>
@@ -37,18 +35,17 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <%--old navbar--%>
+            <%--navbar--%>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 &nbsp;&nbsp;&nbsp;
                 <div class="container">
-                    <a class="navbar-brand" href="HomePage.aspx" style="font-size: 30px; font-family: Impact;">
+                    <a class="navbar-brand" href="HomePage.aspx" style="font-size:30px; font-family: Impact;">
                         <img src="images/music-album1.png" width="70" height="70" />
                         Special Sounds
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon" style="color: #00FF00"></span>
+                        <span class="navbar-toggler-icon" style="color: red"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <%--navbar-nav mr-auto--%>
@@ -93,7 +90,7 @@
                     </div>
                 </div>
             </nav>
-            <%--old navbar--%>
+            <%--navbar--%>
         </div>
 
         <!-- Main Content Placeholder -->
@@ -129,9 +126,7 @@
                 <div id="footer2" class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                            <strong>
-                                <p style="color: black">&copy Copyright. <a class="footerlinks" href="contact.aspx" target="_blank">Special Sounds</a></p>
-                            </strong>
+                                <p style="color: black"><strong>&copy Copyright. </strong><a class="footerlinks" href="contact.aspx" target="_blank">Special Sounds</a></p>
                         </div>
                     </div>
                 </div>
