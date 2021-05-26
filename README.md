@@ -28,8 +28,11 @@ This web app allows the user to rent a music album by contacting the admin. All 
 <h3>Important Links!</h3>
 <p>
   <ul>
-    <li><a href="https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019" target="_blank"><i>How to install Visual Studio</i></a></li>
-    <li><a href="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15" target="_blank"><i>How to Install SQL Server</i></a></li>
+    <li><a href="https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019" target="_blank"><i>How to install Visual Studio.</i></a></li>
+    <li><a href="https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15" target="_blank"><i>How to Install SQL Server.</i></a></li>
+    <li><a href="https://getbootstrap.com/" target="_blank"><i>Get started with Bootstrap!</i></a></li>
+    <li><a href="https://datatables.net/" target="_blank"><i>Datatables! For interactive tables on you web pages.</i></a></li>
+    <li><a href="https://fontawesome.com/" target="_blank"><i>Include Font Awesome on your Bootstrap sites.</i></a></li>
   </ul>
 </p>
 
