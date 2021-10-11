@@ -16,7 +16,7 @@ This web app allows the user to rent a music album by contacting the admin. All 
 <p>
   <ol>
     <li>Open SQL Server Management Studio (preferably 2018)</li>
-    <li>Create New Database, name the database: Name it <b>"Special Sounds"</b></li>
+    <li>Create New Database, name the database <b>"Special Sounds"</b></li>
     <li>Create a table named: adminTB</li>
     <li>Create a table named: albumlendTB</li>
     <li>Create a table named: albumTB</li>
